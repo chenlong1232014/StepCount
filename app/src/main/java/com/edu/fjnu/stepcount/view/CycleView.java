@@ -125,7 +125,7 @@ public class CycleView extends View{
         paintCurrent.setStyle(Paint.Style.STROKE);//设置填充样式
         paintCurrent.setAntiAlias(true);//抗锯齿功能
         paintCurrent.setStrokeWidth(borderWidth);//设置画笔宽度
-        paintCurrent.setColor(Color.parseColor("#afff75"));//设置画笔颜色
+        paintCurrent.setColor(Color.parseColor("#76C353"));//设置画笔颜色
         canvas.drawArc(rectF, startAngle, currentAngleLength, false, paintCurrent);
     }
 
@@ -154,7 +154,7 @@ public class CycleView extends View{
         vTextPaint.setTextSize(dipToPx(16));
         vTextPaint.setTextAlign(Paint.Align.CENTER);
         vTextPaint.setAntiAlias(true);//抗锯齿功能
-        vTextPaint.setColor(Color.parseColor("#66ff66"));
+        vTextPaint.setColor(Color.parseColor("#76C353"));
         String stepString = "步数";
         Rect bounds = new Rect();
         vTextPaint.getTextBounds(stepString, 0, stepString.length(), bounds);

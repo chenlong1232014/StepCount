@@ -17,17 +17,6 @@ public class SharedPreferencesUtils {
      */
     private String FILE_NAME = "share_date";
 
-    // public static SharedPreferencesUtils getInstens(String fileName) {
-    // FILE_NAME = fileName;
-    // if (sharedPreferencesUtils == null) {
-    // synchronized (SharedPreferencesUtils.class) {
-    // if (sharedPreferencesUtils == null) {
-    // sharedPreferencesUtils = new SharedPreferencesUtils();
-    // }
-    // }
-    // }
-    // return sharedPreferencesUtils;
-    // }
 
     public SharedPreferencesUtils(String FILE_NAME) {
         this.FILE_NAME = FILE_NAME;

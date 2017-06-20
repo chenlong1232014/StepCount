@@ -5,25 +5,128 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main_layout"
     tools:context="com.fjnu.administrator.stepcount.MainActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
         <com.edu.fjnu.stepcount.view.CycleView
             android:id="@+id/cv"
             android:layout_width="200dp"
             android:layout_height="200dp"
+            android:layout_alignParentRight="true"
             android:layout_centerInParent="true"/>
 
         <TextView
             android:id="@+id/tv_isSupport"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_below="@id/cv"
+            android:gravity="center"
+            android:text="该设备?支持计步"
+            android:textColor="#0B2A60" />
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/cv"
-            android:layout_marginTop="30dp"
-            android:layout_centerHorizontal="true"
-            android:text="该设备?支持计步"
-            android:textColor="#333333" />
+            android:text="今日星级"
+            android:id="@+id/evaluate"
+            android:textSize="18dp"
+            android:textColor="#0B2A60"
+            android:layout_marginTop="16dp"
+            android:layout_alignTop="@+id/ratingBar"
+            android:drawableLeft="@mipmap/huangguan_min"
+            android:drawablePadding="10dp"
+            android:layout_marginStart="12dp" />
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/ratingBar"
+            android:progressTint="#0B2A60"
+            android:isIndicator="true"/>
+        <TextView
+            android:id="@+id/tv_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:drawableLeft="@mipmap/planmin"
+            android:drawablePadding="10dp"
+            android:text="设置锻炼计划"
+            android:textColor="#0B2A60"
+            android:layout_marginTop="200dp"
+            android:layout_alignParentTop="true"
+            android:onClick="onClick"/>
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:drawableLeft="@mipmap/history"
+            android:drawablePadding="10dp"
+            android:text="查看历史记录"
+            android:textColor="#0B2A60"
+            android:onClick="onClick"
+            android:layout_below="@+id/tv_set"
+            android:layout_marginTop="30dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/city"
+            android:text="城市"
+            android:textSize="28dp"
+            android:textColor="#0B2A60"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@mipmap/location"
+            android:layout_alignBottom="@+id/temp"
+            android:layout_alignStart="@+id/tv_set"
+            android:layout_marginBottom="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="80dp"
+            android:id="@+id/temp"
+            android:text="温度"
+            android:textColor="#0B2A60"
+            android:layout_marginBottom="18dp"
+            android:layout_above="@+id/cv"
+            android:layout_alignParentEnd="true" />
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/sunny"
+            android:id="@+id/weather_pic"
+            android:layout_alignTop="@+id/temp"
+            android:layout_toEndOf="@+id/tv_set" />
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weather_pic"
+            android:gravity="center"
+            android:id="@+id/weather"
+            android:textAlignment="center"
+            android:text="晴"
+            android:textColor="#0B2A60"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="150dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17日星期日"
+            android:textSize="15dp"
+            android:textColor="#0B2A60"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@mipmap/rili"
+            android:id="@+id/date"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/ratingBar"
+            android:layout_marginTop="29dp" />
 
     </RelativeLayout>
 
